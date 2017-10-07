@@ -1,8 +1,8 @@
 Before opening a pull request
 =============================
 
-- [Wiki article on contributing to Node Inspector](https://github.com/node-inspector/node-inspector/wiki/Contributing)
-- [Developer's guide](https://github.com/node-inspector/node-inspector/wiki/Developer%27s-Guide)
+- [Wiki article on contributing to Titanium Debugger](https://github.com/rdking/ti-debugger/wiki/Contributing)
+- [Developer's guide](https://github.com/rdking/ti-debugger/wiki/Developer%27s-Guide)
 
 Before opening an issue
 =======================
@@ -20,7 +20,7 @@ Please upgrade to the newest version before opening an issue:
 and check if it still is reproducible.
 
 If the issue started happening after a recent upgrade, you can downgrade to an older version
-of Node Inspector with a command like this:
+of Titanium Debugger with a command like this:
 
 `npm install -g node-inspector@0.8.3`
 

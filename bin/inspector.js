@@ -22,7 +22,7 @@ process.on('SIGINT', function() {
    process.exit();
 });
 
-console.log('Node Inspector v%s', packageJson.version);
+console.log('Titanium Debugger v%s', packageJson.version);
 
 var debugServer = new DebugServer();
 debugServer.on('error', onError);

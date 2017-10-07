@@ -132,7 +132,7 @@ function startInspectorProcess(callback) {
     case 'SERVER.ERROR':
       return callback(msg.error);
     default:
-      return callback(new Error('Unknown Node Inspector event: ' + msg.event));
+      return callback(new Error('Unknown Titanium Debugger event: ' + msg.event));
     }
   });
 
@@ -150,7 +150,7 @@ function formatNodeInspectorError(err) {
       'Run `' + getCmd() + ' -p {port}` to use a different port.';
   }
 
-  return util.format('Cannot start Node Inspector:', reason);
+  return util.format('Cannot start Titanium Debugger:', reason);
 }
 
 function startDebuggedProcess(callback) {

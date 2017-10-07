@@ -1,9 +1,9 @@
 {
-  "name": "node-inspector",
-  "version": "1.1.1",
-  "description": "Web Inspector based nodeJS debugger",
-  "homepage": "http://github.com/node-inspector/node-inspector",
-  "author": "Danny Coates <dannycoates@gmail.com>",
+  "name": "ti-debuggerr",
+  "version": "1.0.0",
+  "description": "Stand-alone Titanium Debugger (based node-inspector)",
+  "homepage": "http://github.com/rdking/ti-debugger",
+  "author": "Ranando King <kingmph@gmail.com>",
   "keywords": [
     "debug",
     "debugger",
@@ -12,14 +12,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/node-inspector/node-inspector.git"
+    "url": "https://github.com/rdking/ti-debugger.git"
   },
   "engines": {
     "node": ">=0.8.0"
   },
   "bin": {
-    "node-inspector": "./bin/inspector.js",
-    "node-debug": "./bin/node-debug.js"
+    "ti-debugger": "./bin/inspector.js"npm 
   },
   "dependencies": {
     "async": "~0.9",

@@ -1,13 +1,13 @@
-# HOWTO embed Node Inspector
+# HOWTO embed Titanium Debugger
 
-Node Inspector provides two ways of embedding in third-party
+Titanium Debugger provides two ways of embedding in third-party
 applications.
 
 ## 1. Running in a new node process
 
-1. Start the Node Inspector in a new process using
+1. Start the Titanium Debugger in a new process using
   [child_process.fork()](http://nodejs.org/api/child_process.html#child_process_child_process_fork_modulepath_args_options)
-2. Add `message` handler to get notified about Node Inspector events, use
+2. Add `message` handler to get notified about Titanium Debugger events, use
   `msg.event` to check which event was emitted.
 
 ```js
@@ -61,7 +61,7 @@ DebugServer is already exposing the following API:
 
 ### debugServer.address()
 
-Returns the result of `server.address()` plus the URL of the Node Inspector
+Returns the result of `server.address()` plus the URL of the Titanium Debugger
 page to open in browser.
 
 Example:

@@ -1,4 +1,4 @@
-# Node Inspector
+# Titanium Debugger
 
 [![Build Status](https://travis-ci.org/node-inspector/node-inspector.svg?branch=master)](https://travis-ci.org/node-inspector/node-inspector)
 [![NPM version](https://badge.fury.io/js/node-inspector.svg)](http://badge.fury.io/js/node-inspector)
@@ -8,9 +8,9 @@
 
 ## Overview
 
-Node Inspector is a debugger interface for Node.js applications that uses the Blink Developer Tools (formerly WebKit Web Inspector).
+Titanium Debugger is a debugger interface for Node.js applications that uses the Blink Developer Tools (formerly WebKit Web Inspector).
 
-**Since version 6.3, Node.js provides a built-in DevTools-based debugger which mostly deprecates Node Inspector, see e.g. [this blog post](https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27#.pmqejrn8q) to get started. The built-in debugger is developed directly by the V8/Chromium team and provides certain advanced features (e.g. long/async stack traces) that are too difficult to implement in Node Inspector.**
+**Since version 6.3, Node.js provides a built-in DevTools-based debugger which mostly deprecates Titanium Debugger, see e.g. [this blog post](https://medium.com/@paul_irish/debugging-node-js-nightlies-with-chrome-devtools-7c4a1b95ae27#.pmqejrn8q) to get started. The built-in debugger is developed directly by the V8/Chromium team and provides certain advanced features (e.g. long/async stack traces) that are too difficult to implement in Titanium Debugger.**
 
 
 ### Table of Content
@@ -44,22 +44,22 @@ See available configuration options [here](https://github.com/node-inspector/nod
 
 #### Debug
 
-The `node-debug` command will load Node Inspector in your default browser.
+The `node-debug` command will load Titanium Debugger in your default browser.
 
-> **NOTE:** Node Inspector works in Chrome and Opera only. You have to re-open
+> **NOTE:** Titanium Debugger works in Chrome and Opera only. You have to re-open
 the inspector page in one of those browsers if another browser
 is your default web browser (e.g. Safari or Internet Explorer).
 
-Node Inspector works almost exactly as the Chrome Developer Tools. Read the
+Titanium Debugger works almost exactly as the Chrome Developer Tools. Read the
 excellent
 [DevTools overview](https://developer.chrome.com/devtools/index)
 to get started.
 
 Other useful resources:
- - Documentation specific to Node Inspector provided by StrongLoop:
-  [Debugging with Node Inspector](http://docs.strongloop.com/display/SLC/Debugging+applications)
+ - Documentation specific to Titanium Debugger provided by StrongLoop:
+  [Debugging with Titanium Debugger](http://docs.strongloop.com/display/SLC/Debugging+applications)
  - Miroslav's talk
-  [How to Debug Node Apps with Node Inspector](https://vimeo.com/77870960)
+  [How to Debug Node Apps with Titanium Debugger](https://vimeo.com/77870960)
  - Danny's [screencasts](http://www.youtube.com/view_play_list?p=A5216AC29A41EFA8)
    (most likely outdated by now)
  - [Getting Started from scratch](http://github.com/node-inspector/node-inspector/wiki/Getting-Started---from-scratch)
@@ -68,7 +68,7 @@ Other useful resources:
 ## Features
 
 The Blink DevTools debugger is a powerful JavaScript debugger interface.
-Node Inspector supports almost all of the debugging features of DevTools, including:
+Titanium Debugger supports almost all of the debugging features of DevTools, including:
 
 * Navigate in your source files
 * Set breakpoints (and specify trigger conditions)
@@ -85,7 +85,7 @@ Node Inspector supports almost all of the debugging features of DevTools, includ
 * Console output inspection
 
 ### Cool stuff
-* Node Inspector uses WebSockets, so no polling for breaks.
+* Titanium Debugger uses WebSockets, so no polling for breaks.
 * Remote debugging and debugging remote machine.
 * [Live edit of running code](http://github.com/node-inspector/node-inspector/wiki/LiveEdit),
   optionally persisting changes back to the file-system.
@@ -123,13 +123,13 @@ When in doubt, refresh the page in browser
 
 #### Can I debug remotely?
 
-Yes. Node Inspector must be running on the same machine, but your browser can be anywhere.
+Yes. Titanium Debugger must be running on the same machine, but your browser can be anywhere.
 Just make sure port 8080 is accessible.
 
-And if Node Inspector is not running on your remote machine, you can also debug it as long as your local machine can connect it.
-In this way, you must launch Node Inspector with `--no-inject` which means some features are not supported such as profiling and consoling output inspection.
+And if Titanium Debugger is not running on your remote machine, you can also debug it as long as your local machine can connect it.
+In this way, you must launch Titanium Debugger with `--no-inject` which means some features are not supported such as profiling and consoling output inspection.
 
-So how to debug remote machine with your local Node Inspector?
+So how to debug remote machine with your local Titanium Debugger?
 
 ##### option 1
 $ node-inspector --debug-host 192.168.0.2 --no-inject
@@ -157,11 +157,11 @@ Make sure that you have adblock disabled as well as any other content blocking s
 
 #### How can I (selectively) delete debug session metadata?
 
-You may want to delete debug session metadata if for example Node Inspector gets in a bad state with some
+You may want to delete debug session metadata if for example Titanium Debugger gets in a bad state with some
 watch variables that were function calls (possibly into some special c-bindings).  In such cases, even restarting
 the application/debug session may not fix the problem.
 
-Node Inspector stores debug session metadata in the HTML5 local storage.
+Titanium Debugger stores debug session metadata in the HTML5 local storage.
 You can inspect the contents of local storage and remove any items as
 needed. In Google Chrome, you can execute any of the following in the JavaScript console:
 
@@ -178,10 +178,10 @@ window.localStorage.removeItem('breakpoints')
 
 When you are done cleaning up, hit refresh in the browser.
 
-#### Node Inspector takes a long time to start up.
+#### Titanium Debugger takes a long time to start up.
 
 Try setting --no-preload to true. This option disables searching disk for *.js at startup.
-Code will still be loaded into Node Inspector at runtime, as modules are required.
+Code will still be loaded into Titanium Debugger at runtime, as modules are required.
 
 #### How do I debug Mocha unit-tests?
 
@@ -217,7 +217,7 @@ session, there may come time when you need to tweak the default setup.
 
 There are three steps needed to get you up and debugging:
 
-#### 1. Start the Node Inspector server
+#### 1. Start the Titanium Debugger server
 
 ```sh
 $ node-inspector
@@ -309,10 +309,10 @@ so that sources earlier in this list override later ones.
 | :------------------ | :-: | :-----: | :-------- |
 | **general**
 | --help              | -h  |         | Display information about available options.<br/>Use `--help -l` to display full usage info.<br/>Use `--help <option>` to display quick help on `option`.
-| --version           | -v  |         | Display Node Inspector's version.
+| --version           | -v  |         | Display Titanium Debugger's version.
 | --debug-port        | -d  | 5858    | Node/V8 debugger port.<br/>(`node --debug={port}`)
-| --web-host          |     | 0.0.0.0 | Host to listen on for Node Inspector's web interface.<br/>`node-debug` listens on `127.0.0.1` by default.
-| --web-port          | -p  | 8080    | Port to listen on for Node Inspector's web interface.
+| --web-host          |     | 0.0.0.0 | Host to listen on for Titanium Debugger's web interface.<br/>`node-debug` listens on `127.0.0.1` by default.
+| --web-port          | -p  | 8080    | Port to listen on for Titanium Debugger's web interface.
 | **node-debug**
 | --debug-brk         | -b  | true    | Break on the first line.<br/>(`node --debug-brk`)
 | --nodejs            |     | []      | Pass NodeJS options to debugged process.<br/>(`node --option={value}`)
@@ -393,7 +393,7 @@ Use dashed option names in RC files. Sample config file (to be saved as `.node-i
 
 ## Contributing Code
 
-Making Node Inspector the best debugger for node.js cannot be achieved without
+Making Titanium Debugger the best debugger for node.js cannot be achieved without
 the help of the community. The following resources should help you to get
 started.
 
@@ -410,8 +410,8 @@ started.
 #### Alumni
 
  - [Danny Coates](https://github.com/dannycoates) - the original author and a sole maintainer for several years.
- - [Miroslav Bajtoš](https://github.com/bajtos) - sponsored by [StrongLoop](http://strongloop.com), maintained Node Inspector through the Node.js 0.10 era.
- - [3y3](https://github.com/3y3) - maintained Node Inspector in 2015-2016
+ - [Miroslav Bajtoš](https://github.com/bajtos) - sponsored by [StrongLoop](http://strongloop.com), maintained Titanium Debugger through the Node.js 0.10 era.
+ - [3y3](https://github.com/3y3) - maintained Titanium Debugger in 2015-2016
 
 #### Contributors
 

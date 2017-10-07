@@ -1,3 +1,6 @@
+## 2017-10-07, Version 2.0.0
+ * Modified program and created ti-debugger.
+
 ## 2017-04-24, Version 1.1.1
 
  * fix: press enter doesn't work in console (#1006) (淘小杰)
@@ -58,7 +61,7 @@
 
  * Bump ws dependency to 1.0.1 (eliminates dependency on bufferutil) (Andre Asselin)
 
- * Fix issue #832, "node inspector and babel-register". (Albert Pomortsev)
+ * Fix issue #832, "Titanium Debugger and babel-register". (Albert Pomortsev)
 
  * Fix keep-alive network debugging (Yury Puzynya)
 
@@ -356,7 +359,7 @@
 
  * Replace worker title to '' (3y3)
 
- * Replace window title to `Node Inspector` (3y3)
+ * Replace window title to `Titanium Debugger` (3y3)
 
  * Override WebInspector.UIString (3y3)
 

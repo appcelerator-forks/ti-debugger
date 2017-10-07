@@ -2,7 +2,7 @@
 /*global WebInspector, Runtime, InspectorFrontendHost, InspectorBackend, InspectorBackendClass*/
 WebInspector.NodeInspectorOverrides = function() {
   this._overridenStrings = {
-    'Developer Tools - %s': 'Node Inspector - %s',
+    'Developer Tools - %s': 'Titanium Debugger - %s',
     '(no domain)': '(core modules)'
   };
   this._overrideProtocolJsonPath();
