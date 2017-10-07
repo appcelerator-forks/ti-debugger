@@ -18,7 +18,7 @@
     "node": ">=0.8.0"
   },
   "bin": {
-    "ti-debugger": "./bin/inspector.js"npm 
+    "ti-debugger": "./bin/inspector.js"
   },
   "dependencies": {
     "async": "~0.9",
